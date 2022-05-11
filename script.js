@@ -7,7 +7,8 @@ const app = new Vue({
 
     loading: null,
     mailList: [],
-    numberEmail: 10
+    numberEmail: 10,
+    allEmailLoaded: false
 
   },
 
@@ -15,19 +16,26 @@ const app = new Vue({
 
     generateRandomMail(){
 
-      this.loading = true
+      this.loading = true;
       this.mailList= [];
 
       setTimeout(() => {
-
-        this.loading = !this.loading;
 
         for (let x = 0; x < this.numberEmail; x++) {
           axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
             .then(item => {
 
               this.mailList.push(item.data.response);
+              this.allEmailLoaded = true;
               console.log(this.mailList);
+
+              if (this.allEmailLoaded){
+                this.loading = false;
+              } else{
+                this.loading = true;
+              }
+
+
             });  
         }
       }, 1000);
