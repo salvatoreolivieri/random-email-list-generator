@@ -30,7 +30,7 @@ const app = new Vue({
               console.log(this.mailList);
             });  
         }
-      }, 3000);
+      }, 1000);
 
     }
 

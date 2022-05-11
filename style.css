@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .box{
@@ -46,6 +46,7 @@ select{
   padding: 4px 5px;
   border: none;
   border-radius: 5px;
+  width: 40px;
 }
 
 button{
@@ -58,17 +59,17 @@ button{
   color: #E9E9ED;
 }
 
-.email-container{
-  width: 60%;
+li{
+  width: 70%;
   margin: 0 auto;
-  margin-top: 20px;
-  text-align: center;
-  height: 200PX;
+  list-style: none;
+  padding: 7px;
 }
 
-.email-container li{
-  list-style: none;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: aqua;
+.grey{
+  background-color: #E9E9ED;
+}
+
+.white{
+  background-color: white;
 }

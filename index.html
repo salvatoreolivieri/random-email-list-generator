@@ -52,7 +52,9 @@
         </div>
 
         <div>
-          <p v-for="item in mailList">{{mailList}}</p>
+          <ul>
+            <li :class="index % 2 ? 'white' : 'grey' " v-for="(item, index) in mailList">{{item}}</li>
+          </ul>
         </div>
       </div>
 
