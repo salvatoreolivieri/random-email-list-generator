@@ -64,6 +64,9 @@ li{
   margin: 0 auto;
   list-style: none;
   padding: 7px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+
 }
 
 .grey{
