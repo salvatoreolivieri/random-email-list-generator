@@ -50,7 +50,10 @@
         <div v-if="loading">
           <img style="width: 100px;" src="https://i.stack.imgur.com/MEBIB.gif" alt="">
         </div>
-        <p>{{mailList}}</p>
+
+        <div>
+          <p v-for="item in mailList">{{mailList}}</p>
+        </div>
       </div>
 
     </div>
