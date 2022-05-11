@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -15,6 +14,46 @@
 <body>
 
   <div id="app">
+
+    <div class="box">
+
+      <div class="box-top-container">
+
+        <div class="title-container">
+          <h1>Generatore email random</h1>
+        </div>
+  
+        <div class="option-container">
+  
+          <span style="margin-right: 5px;">Seleziona il numero di email che desideri generare randomicamente:</span>
+  
+          <select v-model="numberEmail">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+  
+        <button @click="generateRandomMail()">Genera</button>
+
+      </div>
+
+      <div class="box-bottom-container">
+
+        <div v-if="loading">
+          <img style="width: 100px;" src="https://i.stack.imgur.com/MEBIB.gif" alt="">
+        </div>
+        <p>{{mailList}}</p>
+      </div>
+
+    </div>
 
   </div>
 
