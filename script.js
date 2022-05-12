@@ -29,12 +29,9 @@ const app = new Vue({
               this.allEmailLoaded = true;
               console.log(this.mailList);
 
-              if (this.allEmailLoaded){
+              if (this.mailList.length === this.numberEmail){
                 this.loading = false;
-              } else{
-                this.loading = true;
               }
-
 
             });  
         }
